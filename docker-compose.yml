@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "ruby app/bin/lotto.rb && ruby app/bin/powerball.rb"]
