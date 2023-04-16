@@ -1,8 +1,10 @@
 # Lotto Fun
 
-Disclaimer:  I don't encourage or endorse gambling as a means to get rich.  I accept no responsibility or liability related to you use of this app.
+> Disclaimer:  I don't encourage or endorse gambling as a means to get rich.
+> 
+> Make sure to read the [LICENSE](./LICENSE) as you accept all responsibility related to the use of this application.
 
-## About this repo
+## About
 
 Does history repeat itself?  Probably not in terms of the lottery.
 
@@ -10,7 +12,7 @@ Does history repeat itself?  Probably not in terms of the lottery.
 
 Maybe I'll buy a few tickets and track the success of the predictions.  Maybe I won't
 
-## About the lottery
+### The lottery
 
 The South African lottery uses a format called 6/52, which means that six numbers are drawn from a pool of 52 numbers.  The odds of winning the jackpot are therefore 1 in 20,358,520.  These odds remain the same regardless of how many tickets you buy.  The overall odds of winning any prize in the South African Lotto are approximately 1 in 38.
 
