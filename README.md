@@ -47,3 +47,9 @@ Median probable: ["27", "46", "45", "6", "34", "powerball: 8"]
 Least probable:  ["32", "17", "39", "25", "13", "powerball: 3"]
 Mix probable:    ["44", "37", "6", "34", "25", "powerball: 2"]
 ```
+
+## Experiments
+
+I try out the predictions and compare the outcome to a randomly selected "quickpick".
+
+Take a look at the [experiments](docs/experiments.md) page for the results.
