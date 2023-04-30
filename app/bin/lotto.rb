@@ -26,7 +26,7 @@ def draw_history(number_of_draws)
   hit_rate = 1
   draw_summary['ball_summary'].each do |ball, draws|
     probability = draws.to_f / draw_summary['draw_count'].to_f
-    draw_probability[ball] = binomial_probability(hit_rate, number_of_draws, probability)
+    draw_probability[ball.to_i] = binomial_probability(hit_rate, number_of_draws, probability)
   end
 
   draw_probability = draw_probability.sort_by { |ball, draws| -draws }.to_h
@@ -40,10 +40,10 @@ def draw_history(number_of_draws)
   puts ''
   puts 'Lotto predictions'
   puts '=========================================='
-  puts "Most probable:   #{most_probable}"
-  puts "Median probable: #{median_probable}"
-  puts "Least probable:  #{least_probable}"
-  puts "Mix probable:    #{mix_probable}"
+  puts "Most probable:   #{most_probable.sort}"
+  puts "Median probable: #{median_probable.sort}"
+  puts "Least probable:  #{least_probable.sort}"
+  puts "Mix probable:    #{mix_probable.sort}"
 end
 
 draw_history(ARGV[0].to_i)

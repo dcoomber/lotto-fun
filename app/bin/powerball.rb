@@ -30,29 +30,33 @@ def draw_history(number_of_draws)
   hit_rate = 1
   draw_summary['ball_summary'].each do |ball, draws|
     probability = draws.to_f / draw_summary['draw_count'].to_f
-    draw_probability[ball] = binomial_probability(hit_rate, number_of_draws, probability)
+    draw_probability[ball.to_i] = binomial_probability(hit_rate, number_of_draws, probability)
   end
 
   draw_summary['powerball_summary'].each do |ball, draws|
     probability = draws.to_f / draw_summary['draw_count'].to_f
-    powerball_probability[ball] = binomial_probability(hit_rate, number_of_draws, probability)
+    powerball_probability[ball.to_i] = binomial_probability(hit_rate, number_of_draws, probability)
   end
 
   powerball_probability = powerball_probability.sort_by { |ball, draws| -draws }.to_h
 
-  most_probable = draw_probability.keys.first(5).push("powerball: #{powerball_probability.keys.first(1).join}")
+  most_probable = draw_probability.keys.first(5)
   median = draw_probability.size / 2
-  median_probable = draw_probability.keys[median - 2..median + 2].push("powerball: #{powerball_probability.keys[powerball_probability.size / 2]}")
-  least_probable = draw_probability.keys.last(5).push("powerball: #{powerball_probability.keys.last(1).join}")
-  mix_probable = most_probable[2..3] + median_probable[3..4] + least_probable[3..3].push("powerball: #{powerball_probability.keys.first(1).join}")
+  median_probable = draw_probability.keys[median - 2..median + 2]
+  least_probable = draw_probability.keys.last(5)
+  mix_probable = most_probable[2..3] + median_probable[3..4] + least_probable[3..3]
+
+  most_probable_powerball = powerball_probability.keys.first(1).join
+  median_probable_powerball = powerball_probability.keys[powerball_probability.size / 2]
+  least_probable_powerball = powerball_probability.keys.last(1).join
 
   puts ''
   puts 'Powerball predictions'
   puts '=========================================='
-  puts "Most probable:   #{most_probable}"
-  puts "Median probable: #{median_probable}"
-  puts "Least probable:  #{least_probable}"
-  puts "Mix probable:    #{mix_probable}"
+  puts "Most probable:   #{most_probable.sort.push("powerball: #{most_probable_powerball}")}"
+  puts "Median probable: #{median_probable.sort.push("powerball: #{median_probable_powerball}")}"
+  puts "Least probable:  #{least_probable.sort.push("powerball: #{least_probable_powerball}")}"
+  puts "Mix probable:    #{mix_probable.sort.push("powerball: #{most_probable_powerball}")}"
 end
 
 draw_history(ARGV[0].to_i)
