@@ -5,4 +5,4 @@ services:
     build: .
     volumes:
       - .:/app
-    command: ["sh", "-c", "ruby app/bin/lotto.rb && ruby app/bin/powerball.rb"]
+    command: ["sh", "-c", "ruby app/bin/lotto.rb $DRAWS && ruby app/bin/powerball.rb $DRAWS"]
