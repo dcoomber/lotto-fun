@@ -33,19 +33,19 @@ docker-compose build && docker-compose run app
 ### Sample output
 
 ```
-Lotto predictions
-==========================================
-Most probable:   ["4", "46", "50", "18", "35", "11"]
-Median probable: ["26", "44", "41", "42", "7", "9"]
-Least probable:  ["13", "24", "6", "49", "15", "16"]
-Mix probable:    ["50", "18", "41", "42", "6", "49"]
+Lotto predictions for 10 draw(s)
+======================================================
+Most probable:   [1, 3, 9, 30, 42, 45]
+Median probable: [8, 23, 37, 40, 43, 47]
+Least probable:  [11, 16, 28, 35, 46, 49]
+Mix probable:    [8, 28, 37, 42, 45, 46]
 
-Powerball predictions
-==========================================
-Most probable:   ["20", "33", "44", "37", "16", "powerball: 2"]
-Median probable: ["27", "46", "45", "6", "34", "powerball: 8"]
-Least probable:  ["32", "17", "39", "25", "13", "powerball: 3"]
-Mix probable:    ["44", "37", "6", "34", "25", "powerball: 2"]
+Powerball predictions for 10 draw(s)
+======================================================
+Most probable:   [19, 34, 35, 38, 46, "powerball: 5"]
+Median probable: [9, 18, 42, 43, 50, "powerball: 10"]
+Least probable:  [8, 12, 21, 25, 30, "powerball: 15"]
+Mix probable:    [18, 19, 25, 34, 50, "powerball: 5"]
 ```
 
 ## Experiments
