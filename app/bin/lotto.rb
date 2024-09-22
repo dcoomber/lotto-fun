@@ -2,7 +2,7 @@ require_relative '../lib/rest.rb'
 require_relative '../lib/stats.rb'
 
 number_of_draws = ( ARGV[0].to_i > 0 ) ? ARGV[0].to_i : 1
-lotto_url = "https://nationallottery.co.za/index.php?task=results.getHistoricalData&amp;Itemid=265&amp;option=com_weaver&amp;controller=lotto-history"
+lotto_url = "https://www.nationallottery.co.za/index.php?task=results.getHistoricalData&amp;Itemid=265&amp;option=com_weaver&amp;controller=lotto-history"
 
 lotto_response_code, lotto_response = history_request(lotto_url, 'LOTTO')
 

@@ -27,7 +27,7 @@ The odds of winning the South African Powerball jackpot are quite low, at 1 in 4
 ## Using the scripts
 
 ```shell
-docker-compose build && docker-compose run app
+docker compose build && docker compose run app
 ```
 
 ### Sample output

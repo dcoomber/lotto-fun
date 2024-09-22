@@ -2,7 +2,7 @@ require_relative '../lib/rest.rb'
 require_relative '../lib/stats.rb'
 
 number_of_draws = ( ARGV[0].to_i > 0 ) ? ARGV[0].to_i : 1
-powerball_url = 'https://nationallottery.co.za/index.php?task=results.getHistoricalData&amp;Itemid=272&amp;option=com_weaver&amp;controller=powerball-history'
+powerball_url = 'https://www.nationallottery.co.za/index.php?task=results.getHistoricalData&amp;Itemid=272&amp;option=com_weaver&amp;controller=powerball-history'
 
 powerball_response_code, powerball_response = history_request(powerball_url, 'POWERBALL')
 
